@@ -423,7 +423,7 @@ void AdaptiveCard::SetHeight(const HeightType value)
     m_height = value;
 }
 
-const CardElementType AdaptiveCard::GetElementType() const
+CardElementType AdaptiveCard::GetElementType() const
 {
     return CardElementType::AdaptiveCard;
 }

@@ -40,7 +40,7 @@ namespace AdaptiveSharedNamespace
         virtual bool GetIsVisible() const;
         virtual void SetIsVisible(const bool value);
 
-        virtual const CardElementType GetElementType() const;
+        virtual CardElementType GetElementType() const;
 
         template<typename T> static std::shared_ptr<T> Deserialize(ParseContext& context, const Json::Value& json);
 

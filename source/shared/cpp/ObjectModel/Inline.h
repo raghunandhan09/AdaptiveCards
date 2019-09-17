@@ -23,7 +23,7 @@ namespace AdaptiveSharedNamespace
         virtual Json::Value SerializeToJsonValue() const;
 
         // Element type
-        virtual const InlineElementType GetInlineType() const;
+        virtual InlineElementType GetInlineType() const;
         std::string GetInlineTypeString() const;
 
         static std::shared_ptr<Inline> Deserialize(ParseContext& context, const Json::Value& root);
