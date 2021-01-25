@@ -12,6 +12,7 @@ import { TextFormatter } from '../../utils/text-formatters';
 import { InputContext } from '../../utils/context';
 import * as Utils from '../../utils/util';
 import * as Enums from '../../utils/enums';
+import RNMarkdownFormatter from 'react-native-markdown-formatter';
 
 export class Label extends React.Component {
 
@@ -39,13 +40,12 @@ export class Label extends React.Component {
 			clickProps = { onClick: this.props.onClick }
 		}
 		return (
-			<MarkDownFormatter
+			<RNMarkdownFormatter 
 				defaultStyles={[receivedStyle, computedStyle]}
 				numberOfLines={numberOfLines}
 				text={formattedText}
-				altText={altText}
-				onDidLayout={onDidLayout}
-				{...clickProps} />
+				regexArray={[]}
+    		/>
 		)
 	}
 
